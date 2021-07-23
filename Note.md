@@ -1,0 +1,176 @@
+# HTML 笔记总结
+## 快捷操作
+1. 在vscode中，按“！”再按下回车，html起手式就完成了。
+2. 按“table+” enter 就可以快捷生成table的基本样式
+
+## 章节标签&&全局属性
+### 章节标签
+* h1~h6 标题 
+* section 章节 
+* p 段落
+* footer 常常用于版权声明；格式为：
+```
+<footer>&copy;版权所有zxh</footer>
+```
+* main 主要内容：位于header和footer之间
+* aside 旁支内容：用于导航或者参考资料文献
+* div 划分
+### 全局属性
+1. class 分类 用来标记一个类
+```html
+<div class="midddle">test</div>
+<style>
+.middle{
+    background:black;
+}
+    </style>
+```
+2. contenteditable 用户是否可编辑
+```html
+<div class="middle" contenteditable> 
+    这个div包裹的内容用户可以自己编辑
+    </div>
+```
+3. 让style显示并且可以编辑
+```html
+<style contenteditable>
+    style{
+        display:block;
+        border:1px solid red;
+    }
+    .middle{
+        background:black;
+    }
+    </style>
+```
+4. hidden 隐藏标签
+5. id 标记，不到万不得以不要使用id，因为当两个id一样时，并不会报错
+6. Tabindex tab访问顺序
+页面中所有可以交互的地方都可以用tab键访问，因为有些时候没有鼠标
+tabindex=1
+tabindex=2
+tabindex=0 页面最后访问
+tabindex=-1 tab永远不会访问到这里
+7. title 
+## 默认样式&&CSS reset
+html具有自带样式，但现在以及非常落后，所以我们每次都重置，称之为css reset
+```css
+*{
+    margin:0;
+    padding:0
+    box-sizing:border-box;
+}
+ol,ul{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+}
+table{
+    border-collapse:collapse;
+    border-spacing:0;
+}
+```
+## 常用的内容标签
+1. ol 有序列表
+2. ul 无序列表
+3. dl 描述列表
+4. pre 其包含的内容空格和enter将会保留
+5. code 里的字体是等宽的，里面包含代码
+6. hr 水平分割线
+7. br 换行
+8. a 超连接
+```html
+<a href="http://qq.com" target="_blank">QQ</a>
+```
+9. em 强调 语气强调
+10. strong 本身很重要
+11. quote 引用
+12. blockquote 换行引用，块级引用
+
+
+## HTML重要标签
+
+### a
+#### 属性
+* href 链接，地址
+* target 指定窗口打开
+#### href取值
+1. 网址
+http://google.com
+https://google.com
+//google.com
+2. 路径
+/a/b/c
+index.html
+./index.html
+3. 伪协议
+```html
+<a href="javascript:alert(1);">javascript为协议</a>
+<a href="mailto:2459522339@qq.com">邮箱伪协议</a>
+<a href="tel:19898078992">打电话给我</a>
+```
+4. id
+```html
+<div id="xxx">xx</div>
+<a href="#xxx" target="_blank"></a>
+```
+#### a的target取值
+1. _blank 空的新窗口打开
+2. _top  顶级窗口打开
+3. _parent 父级窗口打开
+4. _self 当前所在窗口打开
+ 
+ ### tableb 标签
+ ```html
+<table>
+    <thead>
+        <tr>
+        <th></th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th></th>
+                <td></td>
+            </tr>
+            </tbody>
+            <tfoot>
+
+            </tfoot>
+    </table>
+ ```
+ ### img标签
+ #### 作用
+ 发出一个get请求，展示一张图片
+ #### 属性
+ 1. alt 可选的，代替错误显示
+ ```html
+<img src="dog.jpg" alt="一只狗仔" >
+ ```
+ 2. height 只写高度，宽度会自适应
+ 3. width 同上
+ #### 事件
+ 1. onload 是否加载成功
+ 2. onerror 加载失败
+
+#### 响应式
+```css
+<style>
+img{
+    max-width:100%;
+}
+</style>
+```
+
+### form标签 表单
+#### 作用
+发get或者post强求，然后刷新页面
+action用来控制请求哪个页面
+method 控制使用get还是post请求
+```html
+<form action="/xxx" method="POST">
+<input type="text"/>
+<input type="submit"/>
+</form>
+```
