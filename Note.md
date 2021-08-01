@@ -174,3 +174,67 @@ method 控制使用get还是post请求
 <input type="submit"/>
 </form>
 ```
+#### form的属性
+1. autocomplete:off|on;控制是否可以自动填充
+2. target="_blank" 告诉浏览器表单提交到哪个页面
+
+#### form的属性
+1. onsubmit 
+当用户点击提交时触发的事件
+```html
+<input type="submit" value="点击"/>
+<button type="submit">点击</button>
+
+```
+input和button有什么区别呢?
+区别是button中还可以添加其他标签,而在form中必须有一个type=submit的按钮,因为只有submit才能提交表单.
+
+### input标签
+```html
+<input type="text| color| password| radio">
+
+```
+* password 输入的数据不予显示,以*或者小圆点代替
+* radio 控制单选
+```html
+<input name=gender type="radio"/>男
+<input name=gender type="radio"/>女
+```
+* checkbox 控制多选
+```html
+<input name=hobby type="checkbox"/>唱
+<input name=hobby type="checkbox"/>跳
+<input name=hobby type="checkbox"/>rap
+```
+* file 选择文件
+```html
+<input type="file" multiple />multiple控制多选
+```
+
+### textarea 多行文本
+
+```html
+<textarea style="resize:none;width:50%;height=300px;"></textarea>
+```
+### select 
+```html
+<select >
+    <option value="1">周一</option>
+      <option value="2">周二</option>
+        <option value="">-请选择-</option>默认
+</select>
+```
+### 验证器
+当用户未填内容时,就无法提交表单
+```html
+<input type="text" required>
+```
+### 注意
+* 一般不监听input的click事件
+* form里面的input必须需要name
+* form里要放一个type="submit"才能触发submit事件
+* 一般一个网页只有一个h1
+* 利用正则表达式删除[1][2]
+vscode 编辑->替换->使用正则表达式(alt+R)->\[\d+\] 替换为空
+* 一般上传的图片不能超过300k
+* vscode输入meta:vp 就会自动生成响应式
