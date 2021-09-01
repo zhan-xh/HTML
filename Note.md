@@ -1,4 +1,5 @@
 # HTML 笔记总结
+[toc]
 ## 快捷操作
 1. 在vscode中，按“！”再按下回车，html起手式就完成了。
 2. 按“table+” enter 就可以快捷生成table的基本样式

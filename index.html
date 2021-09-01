@@ -9,7 +9,59 @@
 </head>
 
 <body>
+    <div class="container">
+        <header>herder</header>
+        <aside>aside</aside>
+        <main>main</main>
+        <div class="ad">ad</div>
+        <footer>footer</footer>
+    </div>
 
+
+    <div>
+
+    </div>
+    <style>
+
+    </style>
+
+
+    <style>
+        .container {
+            min-height: 100vh;
+            display: grid;
+            grid-template-rows: 60px auto 60px;
+            grid-template-columns: 100px auto 100px;
+            grid-template-areas:
+                "header header header"
+                "aside  aside  aside"
+                "footer  footer footer"
+        }
+
+        .container>* {
+            border: 1px solid red;
+        }
+
+        .container>header {
+            grid-area: header;
+        }
+
+        .container>aside {
+            grid-area: aside;
+        }
+
+        .container>main {
+            grid-area: main;
+        }
+
+        .container>.ad {
+            grid-area: ad;
+        }
+
+        .container>footer {
+            grid-area: footer;
+        }
+    </style>
 </body>
 
 </html>
