@@ -1,6 +1,5 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [HTML 笔记总结](#html-%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93)
   - [快捷操作](#%E5%BF%AB%E6%8D%B7%E6%93%8D%E4%BD%9C)
